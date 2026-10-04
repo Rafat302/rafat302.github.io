@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rafat Rahman | GMU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one centered contact card, phone-first; identity block, then contact rows, then the poster note */
+:root{
+  /* GMU green #006633 + GMU gold #FFCC33 */
+  --bg:#eef3ef; --card:#ffffff; --fg:#14231a; --muted:#56685c; --line:#d6e0d9;
+  --green:#006633; --green-deep:#004d26; --gold:#ffcc33; --on-gold:#003d1f;
+  --accent:#006633; --accent-soft:#e2f0e7; --gold-soft:#fff6d6; --head-fg:#ffffff; --head-muted:#cfe6d8;
+  --display:"Newsreader", Georgia, "Times New Roman", serif;
+  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c1410; --card:#141f19; --fg:#e8efea; --muted:#9fb3a6; --line:#26362d;
+  --green:#00552b; --green-deep:#003d1f; --accent:#7fd3a3; --accent-soft:#1c2f24; --gold-soft:#2a2615;
+  --head-fg:#ffffff; --head-muted:#c2dccb; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c1410; --card:#141f19; --fg:#e8efea; --muted:#9fb3a6; --line:#26362d;
+  --green:#00552b; --green-deep:#003d1f; --accent:#7fd3a3; --accent-soft:#1c2f24; --gold-soft:#2a2615;
+  --head-fg:#ffffff; --head-muted:#c2dccb; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5;
+  padding-inline:16px;padding-block:28px 40px}
+.card{max-width:440px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.head{padding:28px 24px 24px;background:var(--green);color:var(--head-fg);display:flex;flex-direction:column;gap:8px;text-align:center;align-items:center}
+.head p,.head h1{margin:0}
+h1{font-family:var(--display);font-weight:600;font-size:38px;line-height:1.1;text-wrap:balance}
+.role{color:var(--gold);font-weight:600;line-height:1.35}
+.dept,.uni{color:var(--head-muted);font-size:15px;line-height:1.35}
+.save{margin-top:16px;align-self:stretch}
+.rows{list-style:none;margin:0;padding:8px 0}
+.rows li{display:flex;align-items:center;gap:14px;padding:14px 24px}
+.rows li+li{border-top:1px solid var(--line)}
+.ico{flex:none;width:38px;height:38px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.ico svg{width:20px;height:20px}
+.txt{min-width:0;flex:1}
+.lab{font-size:12px;color:var(--muted);margin:0}
+.val{margin:0;font-weight:500;overflow-wrap:anywhere}
+a.row-link{color:inherit;text-decoration:none;display:flex;align-items:center;gap:14px;flex:1;min-width:0}
+a.row-link .val{color:var(--accent)}
+a.row-link:hover .val,a.row-link:focus-visible .val{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.arrow{flex:none;color:var(--muted)}
+button.copy{flex:none;font:inherit;font-size:13px;font-weight:600;color:var(--accent);background:transparent;
+  border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
+button.copy:hover{background:var(--accent-soft)}
+.note{margin:0;padding:18px 24px 22px;background:var(--gold-soft);font-size:14px;color:var(--fg)}
+.note b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.save{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;border-radius:12px;
+  background:var(--gold);color:var(--on-gold);font-weight:600;text-decoration:none}
+.save:hover{filter:brightness(1.05)}
+.save svg{width:20px;height:20px}
+@media (prefers-reduced-motion:no-preference){button.copy{transition:background .15s}}
+</style>
+</head>
+<body>
+
+<main class="card">
+  <header class="head">
+    <h1>Rafat Rahman</h1>
+    <p class="role">PhD Student, Graduate Research Assistant</p>
+    <p class="dept">Systems Engineering &amp; Operations Research</p>
+    <p class="uni">George Mason University</p>
+    <a class="save" href="rafat-rahman.vcf" download="Rafat-Rahman.vcf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 20c1.2-3.5 3.8-5 7-5s5.8 1.5 7 5M19 8v6M16 11h6"/></svg>
+      Add to contacts
+    </a>
+  </header>
+
+  <ul class="rows">
+    <li>
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+      <div class="txt"><p class="lab">Email</p><p class="val" id="email">rrahma20@gmu.edu</p></div>
+      <button class="copy" id="copyBtn" type="button">Copy</button>
+    </li>
+    <li>
+      <a class="row-link" href="https://seor.gmu.edu/profiles/rrahma20" target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span>
+        <span class="txt"><span class="lab" style="display:block">Profile</span><span class="val" style="display:block">GMU Profile</span></span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </li>
+    <li>
+      <a class="row-link" href="https://www.linkedin.com/in/rafat-rahman" target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></span>
+        <span class="txt"><span class="lab" style="display:block">Professional network</span><span class="val" style="display:block">LinkedIn</span></span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </li>
+    <li>
+      <a class="row-link" href="https://scholar.google.com/citations?user=Nt90cG0AAAAJ" target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c2 2 10 2 12 0v-5"/></svg></span>
+        <span class="txt"><span class="lab" style="display:block">Publications</span><span class="val" style="display:block">Google Scholar</span></span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </li>
+  </ul>
+
+  <p class="note"><b>At SNAS 2026</b>Post-Diagnosis Comorbidity Patterns in Patients with Still’s Disease (AOSD and sJIA), using real-world EHR data.</p>
+</main>
+
+<script>
+const btn=document.getElementById('copyBtn');
+btn.addEventListener('click',()=>{
+  const text=document.getElementById('email').textContent.trim();
+  const done=()=>{btn.textContent='Copied';setTimeout(()=>btn.textContent='Copy',1800)};
+  const select=()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('email'));const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected'};
+  try{navigator.clipboard.writeText(text).then(done,select)}catch(e){select()}
+});
+</script>
+</body>
+</html>

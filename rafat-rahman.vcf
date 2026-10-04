@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Rahman;Rafat;;;
+FN:Rafat Rahman
+ORG:George Mason University;Department of Systems Engineering and Operations Research
+TITLE:PhD Student\, Graduate Research Assistant
+EMAIL;TYPE=INTERNET,WORK:rrahma20@gmu.edu
+URL;TYPE=WORK:https://seor.gmu.edu/profiles/rrahma20
+item1.URL:https://scholar.google.com/citations?user=Nt90cG0AAAAJ
+item1.X-ABLabel:Google Scholar
+item2.URL:https://www.linkedin.com/in/rafat-rahman
+item2.X-ABLabel:LinkedIn
+END:VCARD
